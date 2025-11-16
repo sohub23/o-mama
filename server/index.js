@@ -29,7 +29,7 @@ app.post('/send-mail', async (req, res) => {
     // Email to admin
     await transporter.sendMail({
       from: process.env.SMTP_USER,
-      to: process.env.SMTP_USER,
+      to: process.env.ADMIN_EMAIL || process.env.SMTP_USER,
       subject: `🔔 New Contact: ${name}`,
       html: `
         <!DOCTYPE html>

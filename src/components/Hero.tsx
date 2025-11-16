@@ -2,82 +2,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import { useEffect, useState } from 'react';
 
-import huaweiLogo from "@/assets/customers/huawei_customer.png";
-import rangsLogo from "@/assets/customers/rangs_customer.png";
 import savroLogo from "@/assets/customers/savro_customer.png";
 import shellLogo from "@/assets/customers/shell_customer.png";
-import brainStationLogo from "@/assets/customers/brain_station_logo.png";
-import basecampLogo from "@/assets/customers/basecamp.png";
-import continenLogo from "@/assets/customers/continen.png";
-import dhsLogo from "@/assets/customers/DHS-1.png";
-import nationalLogo from "@/assets/customers/national0.png";
-import unifiedLogo from "@/assets/customers/unified0.png";
-import sslrLogo from "@/assets/customers/sslr.png";
-import autooLogo from "@/assets/customers/autoo.png";
-import spoonLogo from "@/assets/customers/99spoon00.png";
-import armsLogo from "@/assets/customers/arms.png";
-import ayanaLogo from "@/assets/customers/ayana0.png";
-import braincraftLogo from "@/assets/customers/braincraft0.png";
-import dreamLogo from "@/assets/customers/dream1.png";
-import kyamchLogo from "@/assets/customers/kyamch77.png";
-import mesLogo from "@/assets/customers/mes00.png";
-import mowreyLogo from "@/assets/customers/mowrey887.png";
-import sujonLogo from "@/assets/customers/sujon0.png";
 import zanalaLogo from "@/assets/customers/zanala0.png";
 
 const partnerLogos = [
-  huaweiLogo,
-  rangsLogo,
   savroLogo,
   shellLogo,
-  brainStationLogo,
-  basecampLogo,
-  continenLogo,
-  dhsLogo,
-  nationalLogo,
-  unifiedLogo,
-  sslrLogo,
-  autooLogo,
-  spoonLogo,
-  armsLogo,
-  ayanaLogo,
-  braincraftLogo,
-  dreamLogo,
-  kyamchLogo,
-  mesLogo,
-  mowreyLogo,
-  sujonLogo,
   zanalaLogo
 ];
 
 export const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(6);
-
-  useEffect(() => {
-    const updateItemsToShow = () => {
-      if (window.innerWidth < 640) {
-        setItemsToShow(3);
-      } else if (window.innerWidth < 768) {
-        setItemsToShow(4);
-      } else if (window.innerWidth < 1024) {
-        setItemsToShow(5);
-      } else {
-        setItemsToShow(6);
-      }
-    };
-
-    updateItemsToShow();
-    window.addEventListener('resize', updateItemsToShow);
-    return () => window.removeEventListener('resize', updateItemsToShow);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % Math.max(1, partnerLogos.length - itemsToShow + 1));
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [itemsToShow]);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -144,28 +79,21 @@ export const Hero = () => {
             
             {/* Floating badge */}
             <div className="absolute -bottom-3 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-3 rounded-full shadow-lg z-10">
-              <p className="text-[10px] sm:text-sm font-semibold whitespace-nowrap">Trusted by Leading Organizations</p>
+              <p className="text-[8px] sm:text-sm font-semibold whitespace-nowrap">Trusted by Leading Organizations</p>
             </div>
             
-            {/* Corporate Logos Carousel */}
+            {/* Corporate Logos */}
             <div className="mt-10 sm:mt-12 bg-secondary/50 rounded-xl p-2 sm:p-6 border border-border">
-              <div className="overflow-hidden">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
-                >
-                  {partnerLogos.map((logo, index) => (
-                    <div key={index} className="flex-shrink-0 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 px-1 sm:px-2 md:px-3 lg:px-4">
-                      <div className="h-16 sm:h-20 md:h-24 flex items-center justify-center">
-                        <img 
-                          src={logo}
-                          alt={`Partner ${index + 1}`}
-                          className="max-w-full max-h-12 sm:max-h-16 md:max-h-20 object-contain"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="flex items-center justify-center gap-3 sm:gap-8">
+                {partnerLogos.map((logo, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <img 
+                      src={logo}
+                      alt={`Partner ${index + 1}`}
+                      className="h-8 sm:h-16 md:h-20 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
