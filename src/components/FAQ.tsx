@@ -87,20 +87,20 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">
+    <section className="py-12 sm:py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-16 space-y-3 sm:space-y-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold px-2">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             Everything you need to know about O Mama Point and O Mama Biz
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="install" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsList className="grid w-full grid-cols-2 mb-6 sm:mb-8">
               <TabsTrigger value="install">O Mama Point</TabsTrigger>
               <TabsTrigger value="buy">O Mama Biz</TabsTrigger>
             </TabsList>
@@ -110,11 +110,11 @@ export const FAQ = () => {
               <Accordion type="single" collapsible className="space-y-4">
                 {pointFAQs.map((faq, index) => (
                   <StaggeredItem key={`point-${index}`} index={index}>
-                    <AccordionItem value={`item-${index}`} className="border rounded-lg px-6">
-                      <AccordionTrigger className="text-left">
+                    <AccordionItem value={`item-${index}`} className="border rounded-lg px-3 sm:px-6">
+                      <AccordionTrigger className="text-left text-sm sm:text-base">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-muted-foreground text-xs sm:text-sm">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -128,11 +128,11 @@ export const FAQ = () => {
               <Accordion type="single" collapsible className="space-y-4">
                 {bizFAQs.map((faq, index) => (
                   <StaggeredItem key={`biz-${index}`} index={index}>
-                    <AccordionItem value={`op-${index}`} className="border rounded-lg px-6">
-                      <AccordionTrigger className="text-left">
+                    <AccordionItem value={`op-${index}`} className="border rounded-lg px-3 sm:px-6">
+                      <AccordionTrigger className="text-left text-sm sm:text-base">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-muted-foreground text-xs sm:text-sm">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

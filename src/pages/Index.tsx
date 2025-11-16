@@ -11,7 +11,7 @@ import { BusinessModels } from "@/components/BusinessModels";
 import { Gallery } from "@/components/Gallery";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
-import { GetStartedToday } from "@/components/GetStartedToday";
+
 import { Footer } from "@/components/Footer";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 const Index = () => {
@@ -68,11 +68,6 @@ const Index = () => {
       <ScrollAnimationWrapper>
         <div id="contact">
           <Contact />
-        </div>
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
-        <div id="get-started-today">
-          <GetStartedToday />
         </div>
       </ScrollAnimationWrapper>
       <Footer />

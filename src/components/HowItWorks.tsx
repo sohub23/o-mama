@@ -25,34 +25,34 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="how-it-works" className="py-12 sm:py-20 md:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             How <span className="text-primary">O-MAMA</span> Works
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm sm:text-lg text-muted-foreground px-2 sm:px-0">
             Getting fresh food has never been easier. Just four simple steps to access healthy meals anytime, anywhere.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Left: Steps */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {steps.map((step, index) => (
-              <div key={index} className="flex gap-6 group">
+              <div key={index} className="flex gap-4 sm:gap-6 group">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <span className="text-2xl font-bold text-primary">{step.number}</span>
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <span className="text-xl sm:text-2xl font-bold text-primary">{step.number}</span>
                   </div>
                 </div>
-                <div className="pt-2">
-                  <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+                <div className="pt-1 sm:pt-2">
+                  <h3 className="text-base sm:text-xl font-bold mb-1.5 sm:mb-2 flex items-center gap-2">
                     {step.title}
-                    <CheckCircle className="w-5 h-5 text-primary" />
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -73,7 +73,7 @@ export const HowItWorks = () => {
             </div>
             
             {/* Decorative element */}
-            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full bg-primary/10 rounded-2xl" />
+            <div className="hidden lg:block absolute -z-10 -bottom-6 -right-6 w-full h-full bg-primary/10 rounded-2xl" />
           </div>
         </div>
       </div>

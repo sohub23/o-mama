@@ -69,37 +69,37 @@ export const Menu = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">
+    <section className="py-12 sm:py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-16 space-y-3 sm:space-y-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">
             What's Inside Our <span className="text-primary">Smart Fridges</span>?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2 sm:px-0">
             Fresh, affordable, and diverse — stocked daily to match your taste and needs
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {menuCategories.map((category, index) => (
             <StaggeredItem key={category.name} index={index}>
-              <Card className={`hover:shadow-lg transition-all duration-300 border-2 hover:border-primary ${category.isSupplier ? 'bg-accent/5 border-accent' : ''}`}>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${category.isSupplier ? 'bg-accent/10' : 'bg-primary/10'}`}>
+              <Card className={`hover:shadow-lg transition-all duration-300 border-2 hover:border-primary ${category.isSupplier ? 'bg-primary/5 border-primary' : ''}`}>
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl ${category.isSupplier ? 'bg-accent/10' : 'bg-primary/10'}`}>
                     {category.emoji}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">{category.name}</h3>
+                    <h3 className="text-base sm:text-xl font-bold text-foreground">{category.name}</h3>
                     {category.description && (
-                      <p className="text-xs text-muted-foreground mt-1">{category.description}</p>
+                      <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">{category.description}</p>
                     )}
                   </div>
                 </div>
                 
-                <ul className="space-y-2">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {category.items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
+                    <li key={item} className="text-xs sm:text-sm text-muted-foreground flex items-start gap-1.5 sm:gap-2">
                       <span className={`mt-0.5 ${category.isSupplier ? 'text-accent' : 'text-primary'}`}>✓</span>
                       <span>{item}</span>
                     </li>
@@ -122,15 +122,15 @@ export const Menu = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 bg-secondary px-6 py-3 rounded-full">
-            <span className="text-2xl">💡</span>
-            <p className="text-sm font-medium">
+        <div className="mt-8 sm:mt-16 text-center space-y-3 sm:space-y-4">
+          <div className="inline-flex items-center gap-2 bg-secondary px-4 sm:px-6 py-2 sm:py-3 rounded-full">
+            <span className="text-xl sm:text-2xl">💡</span>
+            <p className="text-xs sm:text-sm font-medium">
               <span className="font-bold text-foreground">Custom menus available!</span> Tell us what your team loves, and we'll stock it.
             </p>
           </div>
           
-          <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-2xl mx-auto px-2 sm:px-0">
             All products sold at <strong className="text-foreground">MRP (Market Retail Price)</strong> — no markup, complete transparency
           </p>
         </div>

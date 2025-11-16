@@ -106,10 +106,10 @@ export const WhyWeStarted = () => {
             </div>
 
             <div className="text-center space-y-4 pt-8">
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
                 No one can do this every day. Life is too fast. Work is too demanding.
               </p>
-              <p className="text-2xl font-bold text-primary">
+              <p className="text-lg sm:text-2xl font-bold text-primary">
                 This is the root problem we are solving.
               </p>
             </div>
@@ -117,12 +117,12 @@ export const WhyWeStarted = () => {
 
           {/* What We Want to Fix - Cleaner Design */}
           <div className="space-y-10">
-            <div className="text-center space-y-3 sm:space-y-4">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold px-2 sm:px-0">What We Want to Fix</h3>
-              <p className="text-muted-foreground text-sm sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">Four core problems preventing healthy eating in Bangladesh</p>
+            <div className="text-center space-y-4">
+              <h3 className="text-3xl md:text-4xl font-bold">What We Want to Fix</h3>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Four core problems preventing healthy eating in Bangladesh</p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
                 {
                   icon: "🏢",
@@ -184,7 +184,7 @@ export const WhyWeStarted = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xl md:text-2xl font-bold text-center text-primary mt-8">
+            <p className="text-base sm:text-xl md:text-2xl font-bold text-center text-primary mt-8">
               O Mama helps people live healthier — without changing their lifestyle.
             </p>
           </div>
@@ -195,17 +195,17 @@ export const WhyWeStarted = () => {
             <p className="text-base sm:text-2xl font-semibold">
               To make Bangladesh a place where fresh and hygienic food is as easy as grabbing a bottle of water.
             </p>
-            <div className="space-y-3 mt-6">
-              <p className="text-xl">To build a platform that respects:</p>
-              <div className="flex flex-wrap justify-center gap-4">
+            <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+              <p className="text-base sm:text-xl">To build a platform that respects:</p>
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                 {["your time", "your health", "your lifestyle", "your daily nutritional needs"].map((value, index) => (
-                  <span key={index} className="bg-primary-foreground/20 px-6 py-2 rounded-full font-semibold">
+                  <span key={index} className="bg-primary-foreground/20 px-3 sm:px-6 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-base">
                     {value}
                   </span>
                 ))}
               </div>
             </div>
-            <p className="text-3xl font-bold mt-8">
+            <p className="text-xl sm:text-3xl font-bold mt-6 sm:mt-8">
               This is O Mama. <br />Fresh Food. Smart Life.
             </p>
           </div>
