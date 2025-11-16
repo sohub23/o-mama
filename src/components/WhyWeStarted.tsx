@@ -128,7 +128,7 @@ export const WhyWeStarted = () => {
                   icon: "🏢",
                   title: "No Hygienic Food Near Workplaces",
                   problem: "Offices, hospitals, and campuses don't offer fresh fruit, salads, or clean snacks.",
-                  solution: null
+                  solution: "O Mama ensures fresh, hygienic food options are always within reach — right where you work, study, and receive care."
                 },
                 {
                   icon: "🍎",

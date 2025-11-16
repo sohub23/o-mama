@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -17,32 +17,40 @@ export const Footer = () => {
             {/* Social Media Buttons */}
             <div className="flex gap-3">
               <a 
-                href="#" 
+                href="https://www.facebook.com/share/14XEqBQSVWX/?mibextid=wwXIfr" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors group"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 text-background/70 group-hover:text-background" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/solutionhubtechnologies/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors group"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-background/70 group-hover:text-background" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/solution-hub-technologie-sohub" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors group"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-background/70 group-hover:text-background" />
               </a>
               <a 
-                href="#" 
+                href="https://www.youtube.com/@solutionhubtechnologysohub" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors group"
-                aria-label="Twitter"
+                aria-label="YouTube"
               >
-                <Twitter className="w-5 h-5 text-background/70 group-hover:text-background" />
+                <Youtube className="w-5 h-5 text-background/70 group-hover:text-background" />
               </a>
             </div>
           </div>

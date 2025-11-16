@@ -28,7 +28,7 @@ export const WhatOMamaIs = () => {
 
             <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
               <p className="text-base sm:text-xl font-bold text-center text-foreground">
-                We are building Bangladesh's first <span className="text-primary">Autonomous Smart Food Network</span> where:
+                We are building a next-generation <span className="text-primary">Autonomous Smart Food Network</span> where:
               </p>
               <div className="space-y-2 sm:space-y-3">
                 {[
@@ -45,7 +45,7 @@ export const WhatOMamaIs = () => {
             </div>
 
             <p className="text-base sm:text-xl text-center font-semibold text-muted-foreground mt-4 sm:mt-6">
-              This is not just a vending machine. <span className="text-primary">This is a new category of food access.</span>
+             This is not just an automated solution. <span className="text-primary">This is a new category of food access.</span>
             </p>
           </div>
         </div>

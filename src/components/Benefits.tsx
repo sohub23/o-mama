@@ -1,4 +1,4 @@
-import smartFridge from "@/assets/o mama.png";
+import smartFridge from "@/assets/O mama.jpg";
 export const Benefits = () => {
   return <section className="py-24 md:py-32 bg-secondary">
       <div className="container mx-auto px-6">
@@ -15,7 +15,7 @@ export const Benefits = () => {
               <div className="bg-background rounded-lg sm:rounded-xl p-2 sm:p-6 shadow-sm space-y-1 sm:space-y-3">
                 <h3 className="text-[10px] sm:text-xl font-bold text-foreground">Supercharge Your Revenue</h3>
                 <p className="text-[8px] sm:text-sm text-muted-foreground">
-                  Boost profits with more sales, reduced costs, and just half the usual vending machine investment.
+                  Boost profits with more sales, reduced costs, and just half the usual investment.
                 </p>
               </div>
 
@@ -37,7 +37,7 @@ export const Benefits = () => {
             {/* Center - Fridge Image */}
             <div className="flex items-center justify-center py-4 sm:py-12 px-1 lg:px-0">
               <div className="relative">
-                <img src={smartFridge} alt="O Mama Smart Fridge with fresh products" className="w-full sm:max-w-md mx-auto rounded-2xl shadow-2xl" />
+                <img src={smartFridge} alt="O Mama Smart Fridge with fresh products" className="w-full lg:max-w-[250px] mx-auto rounded-2xl shadow-2xl" />
                 <div className="absolute -bottom-2 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-1.5 sm:px-6 py-0.5 sm:py-3 rounded-full font-bold shadow-lg whitespace-nowrap text-[7px] sm:text-base">
                   Next Generation Dispensing Experience   
                 </div>

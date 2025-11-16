@@ -68,7 +68,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4">7. Contact Information</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                For questions about these Terms, contact us at hello@omama.com.bd
+                For questions about these Terms, contact us at hello@sohub.com.bd
               </p>
             </section>
           </div>

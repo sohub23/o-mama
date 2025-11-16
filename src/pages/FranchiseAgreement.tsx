@@ -97,7 +97,7 @@ const FranchiseAgreement = () => {
             <section>
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">8. Contact for Agreement</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                To discuss franchise opportunities and finalize agreements, contact us at hello@omama.com.bd
+                To discuss franchise opportunities and finalize agreements, contact us at hello@sohub.com.bd
               </p>
             </section>
           </div>

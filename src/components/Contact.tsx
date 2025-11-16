@@ -152,7 +152,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-sm sm:text-base">Email Us</h3>
-                    <p className="text-muted-foreground text-sm sm:text-base">sohub.web@gmail.com</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">hello@sohub.com.bd</p>
                   </div>
                 </div>
 
@@ -163,7 +163,7 @@ export const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1 text-sm sm:text-base">Call Us</h3>
                     <p className="text-muted-foreground text-sm sm:text-base">+88 09678-076482</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Mon-Sat, 9AM-6PM</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Sun-Thu, 10AM-6:30PM</p>
                   </div>
                 </div>
 

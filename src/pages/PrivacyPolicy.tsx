@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4">6. Contact Us</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                If you have any questions about this Privacy Policy, please contact us at hello@omama.com.bd
+                If you have any questions about this Privacy Policy, please contact us at hello@sohub.com.bd
               </p>
             </section>
           </div>
