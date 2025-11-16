@@ -91,8 +91,14 @@ export const Contact = () => {
                     id="phone" 
                     name="phone"
                     type="tel" 
-                    placeholder="+880 1XXX-XXXXXX" 
+                    placeholder="01XXX-XXXXXX" 
                     required 
+                    pattern="01[0-9]{9}"
+                    maxLength="11"
+                    onInput={(e) => {
+                      const target = e.target as HTMLInputElement;
+                      target.value = target.value.replace(/[^0-9]/g, '');
+                    }}
                     className="h-10 sm:h-12 text-sm sm:text-base"
                   />
                 </div>
