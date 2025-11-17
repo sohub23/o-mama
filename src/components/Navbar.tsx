@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -6,15 +7,29 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolling, setIsScrolling] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
-    setActiveSection(id);
-    setIsScrolling(true);
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth"
-    });
-    setIsOpen(false);
-    setTimeout(() => setIsScrolling(false), 1000);
+    // Check if the current path is not the homepage
+    if (window.location.pathname !== '/') {
+      // 1. Navigate to the homepage using client-side routing
+      navigate('/');
+
+      // 2. After a short delay to allow the homepage to render, scroll to the section
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+
+      setIsOpen(false); // Close mobile menu if open
+      return; // Stop further execution
+    }
+
+    // If on the homepage, keep the existing smooth scroll logic
+    setActiveSection(id); // Set active section for immediate highlight
+    setIsScrolling(true); // Retain original state management, though not directly used by IO
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false); // Close mobile menu if open
+    setTimeout(() => setIsScrolling(false), 1000); // Retain original state management
   };
 
   const menuItems = [
@@ -31,28 +46,30 @@ export const Navbar = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (isScrolling) return;
-      
-      const sections = menuItems.map(item => item.id);
-      const scrollPosition = window.scrollY + 100;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the entry that is currently intersecting within our defined rootMargin
+        const intersectingEntry = entries.find((entry) => entry.isIntersecting);
 
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(sectionId);
-            break;
-          }
+        if (intersectingEntry) {
+          setActiveSection(intersectingEntry.target.id);
         }
+      },
+      {
+        // Creates a 10% high trigger zone at the top of the viewport
+        rootMargin: "-10% 0px -90% 0px",
       }
-    };
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolling]);
+    menuItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []); // Empty dependency array ensures this runs only once
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
