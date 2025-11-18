@@ -37,7 +37,7 @@ export const Benefits = () => {
             {/* Center - Fridge Image */}
             <div className="flex items-center justify-center py-4 sm:py-12 px-1 lg:px-0">
               <div className="relative">
-                <img src={smartFridge} alt="O Mama Smart Fridge with fresh products" className="w-full lg:max-w-[250px] mx-auto rounded-2xl shadow-2xl" />
+                <img src={smartFridge} alt="O Mama Smart Fridge with fresh products" className="w-full lg:max-w-[250px] mx-auto sm:rounded-2xl sm:shadow-2xl lg:rounded-none lg:shadow-none" />
                 <div className="absolute -bottom-2 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-1.5 sm:px-6 py-0.5 sm:py-3 rounded-full font-bold shadow-lg whitespace-nowrap text-[7px] sm:text-base">
                   Next Generation Dispensing Experience   
                 </div>

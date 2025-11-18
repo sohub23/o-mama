@@ -78,7 +78,7 @@ export const Hero = () => {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-3 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-3 rounded-full shadow-lg z-10">
+            <div className="absolute -bottom-6 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-3 rounded-full shadow-lg z-10">
               <p className="text-[8px] sm:text-sm font-semibold whitespace-nowrap">Trusted by Leading Organizations</p>
             </div>
             
@@ -90,7 +90,7 @@ export const Hero = () => {
                     <img 
                       src={logo}
                       alt={`Partner ${index + 1}`}
-                      className="h-8 sm:h-16 md:h-20 w-auto object-contain"
+                      className="h-6 sm:h-10 md:h-12 w-auto object-contain"
                     />
                   </div>
                 ))}
